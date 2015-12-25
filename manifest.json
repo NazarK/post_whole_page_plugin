@@ -1,26 +1,25 @@
 {
-  "name": "Send to Tripsy",
-  "description": "This extension sends your travel info to tripsy server.",
-  "version": "1.0.17",
-  "web_accessible_resources": ["tripsy_plane_hexagon.png","close_icon.png"] ,
+  "name": "post page to",
+  "description": "Sends page html to your url",
+  "version": "1.0.1",
+  "web_accessible_resources": [] ,
   "background": {
     "scripts": ["background.js"],
     "persistent": false
   },
-  "icons": { "128": "tripsy_128x128.png" },
+  "icons": { "128": "id128.png" },
   "permissions": [
     "tabs", "http://*/*", "https://*/*"
   ],
   "content_scripts": [
     {
-      "matches": ["http://www.kayak.com/*"],
+      "matches": ["http://serj.ws/salyk"],
       "js": ["bower_components/jquery/dist/jquery.min.js","content_script.js"]
     }
-  ],  
+  ],
   "browser_action": {
-    "default_title": "Send to Tripsy",
-    "default_icon": "tripsy_16x16.png"
+    "default_title": "post page to",
+    "default_icon": "id.png"
   },
-
   "manifest_version": 2
 }
